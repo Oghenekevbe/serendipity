@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+<style>
+    button{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+</style>
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+    <div class="row">
+        <div class="col">
+
+            <div class="buttons">
+                <button type="submit">Forum</button>
+                <button type="submit">Journal</button>
+                <button type="submit">Talk to a Professional</button>
+                <button type="submit">Your Profile</button>
+                <button type="submit">Blog</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
