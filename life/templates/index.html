@@ -10,28 +10,31 @@
 
 
 <div class="container" style="min-height: 82vh; max-height: max-content;">
-    <div class="row">
-        <div class="col">
-            <div class="index-content" data-aos="fade-up"
-            data-aos-anchor-placement="center-bottom">
-                
-                <div class="buttons">
-                    <button  data-aos="flip-left" type="submit" id="button">Forum</button>
-                    <button data-aos="flip-right" type="submit" id="button">Journal</button>
-                    <button data-aos="flip-right" type="submit" id="button">Talk to a Professional</button>
-                    <button data-aos="flip-up" type="submit" id="button">Your Profile</button>
-                    <button data-aos="flip-down" type="submit" id="button">Blog</button>
-    
-                </div>
-                <div data-aos="flip-left" id="desktop-logo">
-                    <a class="navbar-brand text-light" href="{% url 'index' %}">
-                      <img src="{% static 'media/images/feather.png' %}" alt="Logo" height="80" class="d-inline-block align-text-top" style=" margin-top: -40px;">
-                      <span style="font-weight: lighter !important; font-size: 4rem;">Life &amp; Serendipity</span>
-                    </a>
-                  </div>
-            </div>
+  <div class="row">
+    <div class="col">
+      <div id="index-content" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+
+        <div class="buttons">
+          <button data-aos="flip-left" type="submit" id="button">Forum</button>
+          <button data-aos="flip-right" type="submit" id="button">Journal</button>
+          <button data-aos="flip-right" type="submit" id="button">Talk to a Professional</button>
+          <button data-aos="flip-up" type="submit" id="button">Your Profile</button>
+          <button data-aos="flip-down" type="submit" id="button">Blog</button>
 
         </div>
+        <div data-aos="flip-left" id="desktop-logo">
+          <a class="navbar-brand text-light" href="{% url 'index' %}">
+            <img src="{% static 'media/images/feather.png' %}" alt="Logo" height="80" class="d-inline-block align-text-top" style=" margin-top: -40px;">
+            <span style="font-weight: lighter !important; font-size: 4rem;">Life &amp; Serendipity</span>
+          </a>
+        </div>
+      </div>
+      <button data-aos="zoom-in" class="btn btn-primary" type="submit" id="welcome-button" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">Welcome</button>
     </div>
+  </div>
 </div>
+
+
+
+<script src="{% static 'js/index.js' %}"></script>
 {% endblock content %}
