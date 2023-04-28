@@ -1,0 +1,58 @@
+    /* Set the background image size and position */
+    body {
+        background-size: cover;
+        background-position: center;
+        transition: background 0.5s ease-in-out;
+        position: relative; /* Add relative positioning to body */
+      }
+  
+      /* Add overlay styles */
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(25, 55, 109, 0.5); /* Adjust opacity and color to desired overlay effect */
+      }
+  
+      /* Add styles for content */
+      .content {
+        z-index: 1; /* Ensure content is above overlay */
+        position: relative; /* Add relative positioning to content */
+        padding: 20px;
+      }
+.navbar{
+    background-color: rgba(185, 237, 221, 0.01)!important ;
+    
+    
+}
+#mobile-logo{
+    display: none;
+}
+.nav-item a{
+    color: #fff !important;
+}
+.nav-item a:hover{
+    background-color: #aa7f7f !important;
+}
+.dropdown-menu{
+    background-color: rgba(225, 225, 225, 0.5);
+}
+.dropdown-menu li a{
+    color: black !important;
+}
+
+[data-aos] {
+    transition-duration: 5s !important;
+  }
+  
+
+
+
+
+@media only screen and (max-width: 800px) {
+    #mobile-logo{
+        display: block;
+    }
+}
