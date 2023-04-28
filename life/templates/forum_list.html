@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Forum List{% endblock title %}
+
+{% block content %}
+<style>
+    .card{
+        background-color: rgba(225, 225, 225, 0.5);
+        margin-top: 5px;
+    }
+</style>
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+    <div class="row">
+        <div class="col">
+            {% for post in forums %}
+
+            <div class="card">
+                <div class="card-body">
+                    <h2><a href="{% url 'forum_detail' post.pk %}" style="text-decoration: none; font-weight: lighter;">{{ post.subject }}</a></h2>
+                    <p>{{ post.body|truncatechars:20 }}</p>
+                    <p>By {{ post.author }} on {{ post.date_added}}</p>
+                </div>
+              </div>
+
+            {% empty %}
+              <p>No forum posts available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

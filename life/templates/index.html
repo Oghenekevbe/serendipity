@@ -12,15 +12,26 @@
 <div class="container" style="min-height: 82vh; max-height: max-content;">
   <div class="row">
     <div class="col">
+      <div id="welcome-card">
+        <p>
+        <h6 class=" text-light fw-lighter">Welcome to our mental health support platform! We understand that mental health challenges can be tough to deal with, but you don't have to face them alone. We are here to provide you with the support and assistance you need to live a happy and fulfilling life. Our team of experienced professionals are available to talk to you today and provide guidance to help you navigate life's challenges. Additionally, we have a forum where you can engage with others who may be going through similar experiences, as well as a blog where we share valuable insights on mental health. Don't wait any longer, register today and take the first step towards a healthier, happier you.</h6>
+        </p>
+      </div>
+
       <div id="index-content" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 
         <div class="buttons">
-          <button data-aos="flip-left" type="submit" id="button">Forum</button>
-          <button data-aos="flip-right" type="submit" id="button">Journal</button>
-          <button data-aos="flip-right" type="submit" id="button">Talk to a Professional</button>
-          <button data-aos="flip-up" type="submit" id="button">Your Profile</button>
-          <button data-aos="flip-down" type="submit" id="button">Blog</button>
+          <button data-aos="flip-left" type="submit" id="button"><a href="{% url 'forum_list' %}" style="text-decoration:none; color:#fff;">Forum</a></button>
+          <button data-aos="flip-right" type="submit" id="button"><a href="{% url 'blog_list' %}" style="text-decoration:none; color:#fff;">Blog</a></button>
+          {% if user.is_authenticated %}
+          <button data-aos="zoom-in-right" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Journal</a></button>
+          <button data-aos="flip-up" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Your Profile</a></button>
+          <button data-aos="flip-down" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Talk to a Professional</a></button>
 
+          {% else  %}
+          <button data-aos="zoom-in-down" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Join Us</a></button>
+          <button data-aos="zoom-in-left" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Login</a></button>
+          {% endif %}
         </div>
         <div data-aos="flip-left" id="desktop-logo">
           <a class="navbar-brand text-light" href="{% url 'index' %}">

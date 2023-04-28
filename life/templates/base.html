@@ -40,12 +40,20 @@
 
             <li class="nav-item dropdown mx-5">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Navigation
               </a>
               <ul class="dropdown-menu ">
+                
+                <li><a class="dropdown-item" href="{% url 'index' %}">Home</a></li>
                 <li><a class="dropdown-item" href="#">Register</a></li>
                 <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="{% url 'blog_list' %}">Blog</a></li>
+                <li><a class="dropdown-item" href="{% url 'forum_list' %}">Forum</a></li>
+                {% if user.is_authenticated %}
                 <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Journal</a></li>
+                <li><a class="dropdown-item" href="#">Talk to a Professional</a></li>
+                {% endif %}
                 <li>
                   <hr class="dropdown-divider">
                 </li>

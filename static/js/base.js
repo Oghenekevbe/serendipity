@@ -6,6 +6,12 @@ let imageUrls = [
     '../media/images/4.jpg',       
     '../media/images/5.jpg',       
     '../media/images/6.jpg',  
+    '../media/images/7.jpg',  
+    '../media/images/8.jpg',  
+    '../media/images/9.jpg',  
+    '../media/images/10.jpg',  
+    '../media/images/11.jpg',  
+    '../media/images/12.jpg',  
   ];
   
   let currentIndex = 0;

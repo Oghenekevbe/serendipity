@@ -7,5 +7,6 @@ from .models import *
 admin.site.register(Doctor)
 admin.site.register(Notes)
 admin.site.register(Patient)
-admin.site.register(Post)
+admin.site.register(ForumPost)
+admin.site.register(BlogPost)
 admin.site.register(Comment)
