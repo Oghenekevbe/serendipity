@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Journal Detail{% endblock title %}
+
+{% block content %}
+<style>
+    .card{
+        background-color: rgba(225, 225, 225, 0.5);
+        margin-top: 5px;
+    }
+</style>
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+    <div class="row">
+        <div class="col">
+            
+           
+
+            <div class="card">
+                <div class="card-body">
+                    <h2>{{ post.subject }}</h2>
+                    <p>{{ post.body| safe}}</p>
+                    <p>By {{ post.author }} on {{ post.date_added}}</p>
+                </div>
+              </div>
+
+
+        </div>
+    </div>
+</div>
+{% endblock %}

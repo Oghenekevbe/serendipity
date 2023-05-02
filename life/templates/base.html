@@ -40,7 +40,7 @@
 
             <li class="nav-item dropdown mx-5">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Navigation
+                {% if user.is_authenticated %}{{user.username}}'s{% else %}Guest's{% endif %} Navigation
               </a>
               <ul class="dropdown-menu ">
                 

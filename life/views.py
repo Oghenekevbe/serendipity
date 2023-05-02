@@ -54,3 +54,23 @@ class ForumDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['post'] = self.get_object()
         return context
+
+
+
+class JournalListView(ListView):
+    model = JournalPost
+    template_name = "journal_list.html"
+    context_object_name = 'journal'
+
+    
+class JournalDetailView(DetailView):
+    model = JournalPost
+    template_name = "journal_detail.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["journal"] = self.get_object()
+        return context
+    
+
+    

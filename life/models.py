@@ -43,6 +43,17 @@ class BlogPost(models.Model):
         return f"{self.subject} | {self.author}"
     class Meta:
         ordering = ['date_added']
+        
+class JournalPost(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=225)
+    body = models.TextField()
+    date_added = models.DateTimeField(default = datetime.now, blank= True)
+
+    def __str__(self):
+        return f"{self.subject} | {self.author}"
+    class Meta:
+        ordering = ['date_added']
     
     
 class ForumPost(models.Model):

@@ -24,7 +24,7 @@
           <button data-aos="flip-left" type="submit" id="button"><a href="{% url 'forum_list' %}" style="text-decoration:none; color:#fff;">Forum</a></button>
           <button data-aos="flip-right" type="submit" id="button"><a href="{% url 'blog_list' %}" style="text-decoration:none; color:#fff;">Blog</a></button>
           {% if user.is_authenticated %}
-          <button data-aos="zoom-in-right" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Journal</a></button>
+          <button data-aos="zoom-in-right" type="submit" id="button"><a href="{% url 'journal_list' %}" style="text-decoration:none; color:#fff;">Journal</a></button>
           <button data-aos="flip-up" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Your Profile</a></button>
           <button data-aos="flip-down" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Talk to a Professional</a></button>
 

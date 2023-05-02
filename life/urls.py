@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView
+from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView,JournalListView,JournalDetailView
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -8,5 +8,7 @@ urlpatterns = [
     path("blog_detail/<int:pk>", BlogDetailView.as_view(), name="blog_detail"),
     path("forum_list/", ForumListView.as_view(), name="forum_list"),
     path("forum_detail/<str:pk>", ForumDetailView.as_view(), name="forum_detail"),
+    path("journal_list/", JournalListView.as_view(), name="journal_list"),
+    path("journal_detail/<str:pk>", JournalDetailView.as_view(), name="journal_detail"),
 
 ]

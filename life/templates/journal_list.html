@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Journal List{% endblock title %}
+
+{% block content %}
+<style>
+  .card {
+    background-color: rgba(225, 225, 225, 0.5);
+    margin-top: 5px;
+  }
+</style>
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+  <div class="row">
+    <div class="col">
+      {% for post in journal reversed %}
+      {% if post.author.id == user.id %}
+
+      <div class="card">
+        <div class="card-body">
+          <h6><a href="{% url 'journal_detail' post.pk %}" style="text-decoration: none; font-weight: bolder;">Entry made on
+              {{ post.date_added }} by
+              {{ post.author}}</a></h6>
+          <p>
+            {{ post.body|truncatechars:20 }}
+          </p>
+        </div>
+      </div>
+      {% endif %}
+
+      {% empty %}
+      <p>No Journal posts available.</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
