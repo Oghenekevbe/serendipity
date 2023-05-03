@@ -5,8 +5,7 @@
 {% block content %}
     <div class="container">
         <div class="row">
-            {% if user.is_authenticated %}            
-            {% if user.id == request.user.id %}
+            {% if user %}
            
            <div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
                 <p><h3>Username: {{user.username}}</h3></p>
@@ -15,7 +14,7 @@
                 <p><h3>Email: {{user.email}}</h3></p>
 
             </div>
-           {% endif %}{% endif %}
+           {% endif %}
         </div>
     </div>
 {% endblock content %}

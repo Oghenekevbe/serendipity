@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Unauthorized Page{% endblock title %}
+
+{% block content %}
+
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+
+<div class="container">
+    <div class="row">
+        <div  style="background-color: rgba(225, 225, 225, 0.2);">
+            <p>Unauthorized!!!</p>
+            <img src="{% static 'media/images/stop.png' %}" alt="" width="280" style="margin-right: 30px !important;">
+            <p class="card"><h3 style="outline-color: #fff; outline: 2px;">Nothing to see here.<br>Move along.<br>Thank You</h3></p>
+        </div>
+    </div>
+</div>
+    
+</div>
+{% endblock content %}

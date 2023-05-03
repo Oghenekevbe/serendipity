@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Patient List{% endblock title %}
+
+
+{% block content %}
+<div class="container">
+<div class="row">
+{% if patient %}
+
+<div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
+    <p>
+    <h3>Username: {{patient.name}}</h3>
+    </p>
+    <p>
+    <h3>First Name: {{patient.email}}</h3>
+    </p>
+    <p>
+    <h3>Last Name: {{patient.phone_number}}</h3>
+    </p>
+
+</div>
+{% empty %}
+<div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
+    <p>
+        <h3>There are no patient records</h3>
+    </p>
+
+</div>
+
+{% endif %}
+</div>
+</div>
+{% endblock content %}

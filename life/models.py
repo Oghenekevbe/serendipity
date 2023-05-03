@@ -2,23 +2,33 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
 
-
-class Doctor(models.Model):
-    name = models.OneToOneField(User, on_delete=models.CASCADE)
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone_number = models.CharField(max_length=20)
     email = models.EmailField()
+    
+class Doctor(models.Model):
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return self.name.username
+        if self.profile:
+            return f'Dr. {self.profile.user.username}'
+        else:
+            return 'Unassigned Doctor'
 
 class Patient(models.Model):
-    name = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone_number = models.CharField(max_length=20)
-    email = models.EmailField()
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
     doctor_notes = models.ManyToManyField(Doctor, through='Notes')
 
     def __str__(self):
-        return self.name.username
+        if self.profile:
+            return f' {self.profile.user.username}'
+        else:
+            return 'Unassigned Patient'
+    
+    def get_absolute_url(self):
+        return reverse("profile", kwargs={"pk": self.pk})
+    
 
 class Notes(models.Model):
     doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
@@ -27,7 +37,7 @@ class Notes(models.Model):
     date_added = models.DateTimeField(default = datetime.now, blank= True)
 
     def __str__(self):
-        return f"Dr. {self.doctor}'s notes for {self.patient}"
+        return f" {self.doctor}'s notes for {self.patient}"
     
     class Meta:
         ordering = ['date_added']
