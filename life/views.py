@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import ListView, DetailView
-from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Profile
+from django.views.generic import ListView, DetailView, CreateView
+from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Profile, Consultation, ConsultationComment
+# from .forms import ProfessionalForm
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -83,7 +84,7 @@ def errorpage(request):
 class ProfileView(DetailView):
     model = Profile
     template_name = "registration/profile.html"
-    
+
 
     # def get(self, request, *args, **kwargs):
     #     messages.success(request, 'Your action was successful!')
@@ -109,6 +110,17 @@ class PatientProfileView(DetailView):
         return context
     
     
-   
-
+class Professional(ListView):
+    model = Consultation
+    template_name = "professional_list.html"   
+    context_object_name = 'consultations'
+    
+class ProfessionalDetail(DetailView):
+    model = Consultation
+    template_name = "professional_detail.html"   
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+    
     

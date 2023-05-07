@@ -7,6 +7,10 @@ class Profile(models.Model):
     phone_number = models.CharField(max_length=20)
     email = models.EmailField()
     
+    
+    def __str__(self):
+        return str(self.user.username)
+    
 class Doctor(models.Model):
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True)
 
@@ -91,3 +95,25 @@ class Comment(models.Model):
     class Meta:
         ordering = ['date_added']
     
+class Consultation(models.Model):
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=datetime.now)
+    notes = models.ForeignKey(Notes, on_delete=models.CASCADE, blank=True, null=True)    
+    complaint = models.TextField(default='')
+    comment = models.ForeignKey('ConsultationComment', on_delete=models.CASCADE, null = True, blank = True, related_name = 'consultation_comments')
+    
+    def __str__(self):
+        return f"{self.patient}'s consultation with {self.doctor}"
+    
+    class Meta:
+        ordering = ['-date']
+
+class ConsultationComment(models.Model):
+    consultation = models.ForeignKey(Consultation, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    body = models.TextField()
+    date_added = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return f"{self.author} commented on {self.consultation}"

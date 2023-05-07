@@ -50,9 +50,9 @@
                 <li><a class="dropdown-item" href="{% url 'blog_list' %}">Blog</a></li>
                 <li><a class="dropdown-item" href="{% url 'forum_list' %}">Forum</a></li>
                 {% if user.is_authenticated %}
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Journal</a></li>
-                <li><a class="dropdown-item" href="#">Talk to a Professional</a></li>
+                <li><a class="dropdown-item" href="{% url 'profile' user.pk %}">Profile</a></li>
+                <li><a class="dropdown-item" href="{% url 'journal_list' %}">Journal</a></li>
+                <li><a class="dropdown-item" href="{% url 'professional_list' %}">Talk to a Professional</a></li>
                 {% if user.is_staff %}
                 <li><a class="dropdown-item" href="patient_list">Patient List</a></li>
                 {% endif %}
