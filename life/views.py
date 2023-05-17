@@ -3,8 +3,11 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404, render
 from django.views.generic import ListView, DetailView, CreateView
 from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Profile, Consultation, ConsultationComment
-# from .forms import ProfessionalForm
+from .forms import JournalPostForm
+
+
 # Create your views here.
+
 def index(request):
     return render(request, 'index.html')
 
@@ -63,19 +66,22 @@ class JournalListView(ListView):
     model = JournalPost
     template_name = "journal_list.html"
     context_object_name = 'journal'
+    
 
     
 class JournalDetailView(DetailView):
     model = JournalPost
     template_name = "journal_detail.html"
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["journal"] = self.get_object()
-        return context
+    context_object_name = 'post'
     
 def errorpage(request):
     return render(request, 'unauthorized.html')
+
+
+class AddJournal(CreateView):
+    model = JournalPost
+    template_name = 'add_journal.html'
+    form_class = JournalPostForm
     
     
     

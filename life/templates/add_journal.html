@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Add Journal Item{% endblock title %}
+
+{% block content %}
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+    <div class="row">
+        <div class="col">
+            <form action="" method="POST">
+                {{form.as_p}}
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}

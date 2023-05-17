@@ -3,11 +3,16 @@ from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Co
 
 
 
-# class ProfessionalForm(forms.Form):
-    
-    
-#     new_password2 = forms.CharField(max_length=255, widget= forms.PasswordInput(attrs={'class':'form-control', 'type': 'password'}),required=True,)
-    
-#     class Meta:
-#         model = User
-#         fields = ('old_password', 'new_password1', 'new_password2')
+
+class JournalPostForm(forms.ModelForm):
+    subject = forms.CharField(
+        max_length=225,
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    body = forms.CharField(
+        widget=forms.Textarea(attrs={'class': 'form-control'})
+    )
+
+    class Meta:
+        model = JournalPost
+        fields = ['subject', 'body']

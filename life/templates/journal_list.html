@@ -11,6 +11,9 @@
 <div class="container" style="min-height: 82vh; max-height: max-content;">
   <div class="row">
     <div class="col">
+      <a href="{% url 'add_journal' %}" class="btn btn-primary">Add New Journal Entry</a>
+
+
       {% for post in journal reversed %}
       {% if post.author.id == user.id %}
 
