@@ -16,3 +16,8 @@ class JournalPostForm(forms.ModelForm):
     class Meta:
         model = JournalPost
         fields = ['subject', 'body']
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        super().__init__(*args, **kwargs)
+        

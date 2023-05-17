@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Add Journal Item{% endblock title %}
+{% block title %}Edit Journal Item{% endblock title %}
 
 {% block content %}
 <div class="container" style="min-height: 82vh; max-height: max-content;">
     <div class="row">
         <div class="col">
+            <h3>Edit Journal Item</h3>
             <form action="" method="POST">
                 {% csrf_token %}
                 {{form.as_p}}

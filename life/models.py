@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime
+from django.urls import reverse
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -68,6 +70,10 @@ class JournalPost(models.Model):
         return f"{self.subject} | {self.author}"
     class Meta:
         ordering = ['date_added']
+
+    def get_absolute_url(self):
+        return reverse("journal_list")
+        
     
     
 class ForumPost(models.Model):

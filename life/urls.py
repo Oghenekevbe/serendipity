@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView,JournalListView, JournalDetailView, AddJournal, ProfileView, Professional, ProfessionalDetail
+from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView,JournalListView, JournalDetailView, AddJournal, EditJournal, DeleteJournal, ProfileView, Professional, ProfessionalDetail
 
 
 urlpatterns = [
@@ -15,6 +15,8 @@ urlpatterns = [
     path("journal_list/", JournalListView.as_view(), name="journal_list"),
     path("journal_detail/<str:pk>", JournalDetailView.as_view(), name="journal_detail"),
     path("add_journal/", AddJournal.as_view(), name="add_journal"),
+    path("edit_journal/<str:pk>", EditJournal.as_view(), name="edit_journal"),
+    path("delete_journal/<str:pk>", DeleteJournal.as_view(), name="delete_journal"),
     
     path("profile/<str:pk>", ProfileView.as_view(), name="profile"),
     path("professional_list/", Professional.as_view(), name="professional_list"),

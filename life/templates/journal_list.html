@@ -25,6 +25,8 @@
           <p>
             {{ post.body|truncatechars:20 }}
           </p>
+          <a href="{% url 'edit_journal' post.pk %} " class="btn btn-primary">Edit</a>
+          <a href="{% url 'delete_journal' post.pk %}" class="btn btn-primary">Delete</a>
         </div>
       </div>
       {% endif %}

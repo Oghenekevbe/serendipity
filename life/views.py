@@ -1,8 +1,9 @@
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.shortcuts import get_object_or_404, render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Profile, Consultation, ConsultationComment
+from django.urls import reverse_lazy
 from .forms import JournalPostForm
 
 
@@ -83,7 +84,19 @@ class AddJournal(CreateView):
     template_name = 'add_journal.html'
     form_class = JournalPostForm
     
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
     
+class EditJournal(UpdateView):
+    model = JournalPost
+    template_name = 'edit_journal.html'
+    form_class = JournalPostForm
+
+class DeleteJournal(DeleteView):
+    model = JournalPost
+    template_name = 'delete_journal.html'
+    success_url = reverse_lazy('journal_list')
     
 # user interaction
 
@@ -92,9 +105,6 @@ class ProfileView(DetailView):
     template_name = "registration/profile.html"
 
 
-    # def get(self, request, *args, **kwargs):
-    #     messages.success(request, 'Your action was successful!')
-    #     return super().get(request, *args, **kwargs)
         
         
 class PatientProfileView(ListView):
