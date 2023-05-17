@@ -20,7 +20,7 @@ urlpatterns = [
     
     path("profile/<str:pk>", ProfileView.as_view(), name="profile"),
     path("professional_list/", Professional.as_view(), name="professional_list"),
-    path("<str:pk>/professional_detail/", ProfessionalDetail.as_view(), name="professional_details"),
+    path("professional_detail/<str:pk>", ProfessionalDetail.as_view(), name="professional_detail"),
 
 
 ]
