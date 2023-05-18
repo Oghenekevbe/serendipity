@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Add a consultation{% endblock title %}
+
+{% block content %}
+<div class="container" style="min-height: 82vh; max-height: max-content;">
+    <div class="row">
+        <div class="col">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <button type="submit"  class="btn btn-sm btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

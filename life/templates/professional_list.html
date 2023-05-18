@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-{% block title %}Talk to a professional{% endblock title %}
+{% load static %}
+
+{% block title %}Talk to a professional{% endblock %}
 
 {% block content %}
 
@@ -7,36 +9,52 @@
   <div class="row">
 
 
-    {% if consultations %}
       <div id="consultation">
+        <h3 class="text-light">My Consultation History</h3>
+        <a href="{% url 'add_consultation' %}" class="btn btn-danger">New Consultation</a>
 
-        <h3 class=" text-light" >My Consultation History</h3>
+        {% for item in consultations %}
+          {% if item.patient.profile.user == request.user %}
+            <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin-top: 10px;">
+              <a href="{% url 'professional_detail' item.pk %}">{{ item.date }}</a>
+              <p><h6>{{ item.complaint|truncatechars:40 }}</h6></p>
+            </div>
+          {% endif %}
+        {% endfor %}
         
-            {% for item in consultations %}
-                {% if item.patient.profile.user == request.user %}
-                    <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin-top: 10px;">
-                        <a href="{% url 'professional_detail' item.pk %}">{{ item.date }}</a>
-                      
-                        <p><h6>{{ item.complaint|truncatechars:40 }}</h6></p>
-                    </div>
-                {% endif %}
-            {% endfor %}
-      </div>
-    {% else %}
-
-    <div id="professional-intro">
-      <div class='card' style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin-top: 10px;">
-        <h6>Thank you for taking the brave step to seek help for your mental health. <br>We understand that reaching out can be difficult, and we want to commend you for taking this important step towards improving your well-being.<br><br>
-
-          To connect with a mental health professional who can provide support and guidance, please click the button below. <br><br>We're here to help you on your journey towards greater mental health and happiness</h6><br><button class="btn btn-primary btn-sm" type="submit" id="get-help"><strong>Click Me</strong></button>
       </div>
 
-    </div>
 
-    {% endif %}
+      <div id="professional-intro">
+        <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin-top: 10px;">
+          <h6>
+            Thank you for taking the brave step to seek help for your mental health. <br>
+            We understand that reaching out can be difficult, and we want to commend you for taking this important step towards improving your well-being.<br><br>
+            To connect with a mental health professional who can provide support and guidance, please click the button below. <br><br>
+            We're here to help you on your journey towards greater mental health and happiness
+          </h6>
+          <br>
+          <a href="{% url 'add_consultation' %}" class="btn btn-danger">Click Me</a>
+
+        </div>
+      </div>
 
   </div>
 </div>
 
+<script>
+  const consultation = document.getElementById('consultation');
+  const intro = document.getElementById('professional-intro');
+  
+  const isUserAuthenticated = '{{request.user.is_authenticated}}'==='True';
+  
+  if (isUserAuthenticated) {
+      consultation.style.display = 'block';
+      intro.style.display = 'none';
+  } else {
+      consultation.style.display = 'none';
+  intro.style.display = 'block';
+  }
 
-{% endblock content %}
+</script>
+{% endblock %}

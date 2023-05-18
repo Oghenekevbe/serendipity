@@ -102,7 +102,7 @@ class Comment(models.Model):
         ordering = ['date_added']
     
 class Consultation(models.Model):
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, null= True)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     date = models.DateTimeField(default=datetime.now)
     notes = models.ForeignKey(Notes, on_delete=models.CASCADE, blank=True, null=True)    

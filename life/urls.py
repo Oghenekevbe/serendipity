@@ -1,11 +1,11 @@
 from django.urls import path
 from . import views
-from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView,JournalListView, JournalDetailView, AddJournal, EditJournal, DeleteJournal, ProfileView, Professional, ProfessionalDetail
+from .views import BlogListView,ForumListView,BlogDetailView,ForumDetailView,JournalListView, JournalDetailView, AddJournal, EditJournal, DeleteJournal, ProfileView, Professional, ProfessionalDetail, AddConsultation
 
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("404/", views.errorpage,),
+    path("unauthorized/", views.unauthorized, name='unauthorized'),
     path("blog_list/", BlogListView.as_view(), name="blog_list"),
     path("blog_detail/<int:pk>", BlogDetailView.as_view(), name="blog_detail"),
     
@@ -21,6 +21,7 @@ urlpatterns = [
     path("profile/<str:pk>", ProfileView.as_view(), name="profile"),
     path("professional_list/", Professional.as_view(), name="professional_list"),
     path("professional_detail/<str:pk>", ProfessionalDetail.as_view(), name="professional_detail"),
+    path("add_consultation", AddConsultation.as_view(), name="add_consultation"),
 
 
 ]

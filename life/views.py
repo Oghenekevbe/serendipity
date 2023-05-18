@@ -1,13 +1,25 @@
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.shortcuts import get_object_or_404, render
+from django.contrib.auth.mixins import UserPassesTestMixin
+from django.http.response import HttpResponseRedirect
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Profile, Consultation, ConsultationComment
 from django.urls import reverse_lazy
-from .forms import JournalPostForm
+from .forms import JournalPostForm, ConsultationForm
 
 
 # Create your views here.
+
+class UserMixin(UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.is_authenticated
+    def handle_no_permission(self):
+        return redirect('unauthorized')
+
+def unauthorized(request):
+    return render(request, 'unauthorized.html')
+    
 
 def index(request):
     return render(request, 'index.html')
@@ -75,8 +87,7 @@ class JournalDetailView(DetailView):
     template_name = "journal_detail.html"
     context_object_name = 'post'
     
-def errorpage(request):
-    return render(request, 'unauthorized.html')
+
 
 
 class AddJournal(CreateView):
@@ -126,13 +137,23 @@ class PatientProfileView(DetailView):
         return context
     
     
-class Professional(ListView):
+class Professional(UserMixin ,ListView):
     model = Consultation
     template_name = "professional_list.html"   
     context_object_name = 'consultations'
     
-class ProfessionalDetail(DetailView):
+class ProfessionalDetail(UserMixin ,DetailView):
     model = Consultation
     template_name = "professional_detail.html"   
     context_object_name = 'item'
-    
+
+class AddConsultation(UserMixin ,CreateView):
+    model = Consultation
+    template_name = "add_consultation.html"   
+    form_class = ConsultationForm
+    success_url = reverse_lazy('professional_list')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['request'] = self.request
+        return kwargs
