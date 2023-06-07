@@ -1,14 +1,68 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Consultation Details{% endblock title %}
 
 {% block content %}
 <div class="container">
-<div class="row">
+  <div class="row">
     <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px;">
-        <h6>{{ item.date }}</h6>
-        <hr>
-        <h6>{{ item.complaint }}</h6>
+      <h6>
+        {{ consultation.date }}
+      </h6>
+      <hr>
+      <h6>
+        {{ consultation.complaint }}
+      </h6>
     </div>
+    {% if user.is_staff %}
+    {% if notes %}
+    <button type="submit" id="notes"  class="btn btn-primary btn-sm">Show Notes</button>
+    <div class="card mt-3" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; display: none;" id="doctor-notes">
+      <h6>Consultation Notes:</h6>
+      <ul>
+        {% for note in notes %}
+        <p>
+          {{ note.doctor }} - on
+          {{ note.date_added }}
+        </p>
+        <li>
+          {{ note.notes }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% endif %}
+
+<div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
+    <h6>Add a comment:</h6>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button onclick="subform()" class="btn btn-sm btn-ouline-light btn-primary">Submit</button>
+    </form>
+
 </div>
+  
+    {% if comments %}
+    <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;" id="comments">
+      <h6>Comments:</h6>
+      <ul>
+        {% for comment in comments reversed %}
+        <li>
+          {{ comment.author }} - on
+          {{ comment.date_added }} <br>
+        
+        
+          <em>{{ comment.body }}</em>
+        </li>
+        <hr>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+  </div>
 </div>
+<script src="{% static 'js/consultation.js' %}"></script>
 {% endblock content %}

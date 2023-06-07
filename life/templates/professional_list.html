@@ -14,7 +14,7 @@
         <a href="{% url 'add_consultation' %}" class="btn btn-danger">New Consultation</a>
 
         {% for item in consultations %}
-          {% if item.patient.profile.user == request.user %}
+          {% if item.patient.user == request.user %}
             <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin-top: 10px;">
               <a href="{% url 'professional_detail' item.pk %}">{{ item.date }}</a>
               <p><h6>{{ item.complaint|truncatechars:40 }}</h6></p>
