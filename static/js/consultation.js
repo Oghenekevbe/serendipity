@@ -11,10 +11,3 @@ note.addEventListener('click', event => {
   }
 });
 
-function subform() {
-    addEventListener('click', event=>{
-        event.preventDefault();
-        
-    })
-    
-}

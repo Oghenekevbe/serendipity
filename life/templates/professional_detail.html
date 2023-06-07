@@ -36,11 +36,12 @@
 
 <div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
     <h6>Add a comment:</h6>
-    <form action="" method="POST">
+    <form action="" method="POST" id="commentForm">
         {% csrf_token %}
-        {{form.as_p}}
-        <button onclick="subform()" class="btn btn-sm btn-ouline-light btn-primary">Submit</button>
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-sm btn-outline-light btn-primary">Submit</button>
     </form>
+    
 
 </div>
   

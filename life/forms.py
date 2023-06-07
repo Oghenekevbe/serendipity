@@ -73,5 +73,5 @@ class ConsultationCommentForm(forms.Form):
 
         class Meta:
             model = ConsultationComment
-            fields = ["complaint"]
+            fields = ["body"]
     

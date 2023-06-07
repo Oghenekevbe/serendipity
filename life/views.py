@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http.response import HttpResponseRedirect
@@ -184,7 +185,23 @@ class ProfessionalDetail(UserMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['notes'] = self.object.notes_set.all() #or consultation.notes.all()
         context['comments'] = self.object.comments.all()
+        if 'form' not in context:
+            context['form'] = self.form_class()
         return context
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            consultation = self.get_object()
+            comment = ConsultationComment(
+                consultation=consultation,
+                author=request.user,
+                body=form.cleaned_data['body']
+            )
+            comment.save()
+            return HttpResponseRedirect(reverse('professional_detail', args=(consultation.pk,)))
+        else:
+            return self.render_to_response(self.get_context_data(form=form))
 
 class AddConsultation(UserMixin, CreateView):
     model = Consultation

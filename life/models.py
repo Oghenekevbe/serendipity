@@ -118,6 +118,4 @@ class ConsultationComment(models.Model):
 
     def __str__(self):
         return f"{self.author} commented on {self.consultation}"
-    def get_absolute_url(self):
-        return reverse("professional_detail", kwargs={"pk": self.pk})
     
