@@ -11,45 +11,39 @@
 <div class="container" style="min-height: 82vh; max-height: max-content;">
     <div class="row">
         <div class="col">
-            
            
-
             <div class="card">
                 <div class="card-body">
                     <h2>{{ post.subject }}</h2>
-                    <p>{{ post.body| safe}}</p>
-                    <p>By {{ post.author }} on {{ post.date_added}}</p>
+                    <p>{{ post.body|safe }}</p>
+                    <p>By {{ post.author }} on {{ post.date_added }}</p>
                 </div>
               </div>
 
-
               <div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
-                <h6 class=" text-danger fw-bold">Add a comment:</h6>
+                <h6 class="text-danger fw-bold">Add a comment:</h6>
                 <form action="" method="POST" id="commentForm">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-sm btn-outline-light btn-primary">Submit</button>
                 </form>
-                
-            
             </div>
 
             <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;" id="comments">
               <h6>Comments:</h6>
               <ul>
-                {% for comment in forum.comments.all reversed %}
-                <li>
-                  {{ comment.author }} - on
-                  {{ comment.date_added }} <br>
-                
-                
-                  <em>{{ comment.body }}</em>
-                </li>
-                <hr>
-                {% endfor %}
+                  {% if comments %}
+                      {% for comment in comments reversed  %}
+                      <li>
+                        {{ comment.author }} - on
+                        {{ comment.date_added }} <br>
+                        <em>{{ comment.body }}</em>
+                      </li>
+                      <hr>
+                      {% endfor %}
+                  {% endif %}
               </ul>
             </div>
-        
 
         </div>
     </div>

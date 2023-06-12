@@ -77,7 +77,7 @@ class ForumPost(models.Model):
     subject = models.CharField(max_length=225)
     body = models.TextField()
     date_added = models.DateTimeField(default=datetime.now, blank=True)
-    comments = models.ForeignKey("Comment", related_name= 'forumpost', null=True, blank=True, on_delete=models.CASCADE)
+    comments = models.ManyToManyField("Comment", related_name='comment', blank=True)
 
     def __str__(self):
         return f"{self.subject} | {self.author}"
@@ -87,7 +87,7 @@ class ForumPost(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(ForumPost, on_delete=models.CASCADE, related_name='comment')
+    post = models.ForeignKey(ForumPost, on_delete=models.CASCADE, related_name='forumpost')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     date_added = models.DateTimeField(default=datetime.now, blank=True)
@@ -104,8 +104,7 @@ class Consultation(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     date = models.DateTimeField(default=datetime.now)
     complaint = models.TextField(default='')
-    comment = models.ForeignKey('ConsultationComment', on_delete=models.CASCADE, null=True, blank=True,
-                                related_name='consultation_comments')
+    comment = models.ForeignKey('ConsultationComment', on_delete=models.CASCADE, null=True, blank=True, related_name='consultation_comments')
 
     def __str__(self):
         return f"{self.patient}'s consultation with {self.doctor}"

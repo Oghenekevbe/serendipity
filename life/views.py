@@ -15,6 +15,13 @@ from .forms import JournalPostForm, ConsultationForm, EditProfileForm, Consultat
 # Create your views here.
 
 
+class StaffMixin(UserPassesTestMixin):
+    def test_func(self):
+        return self.request.user.is_staff
+
+    def handle_no_permission(self):
+        return redirect("unauthorized")
+    
 class UserMixin(UserPassesTestMixin):
     def test_func(self):
         return self.request.user.is_authenticated
@@ -68,7 +75,6 @@ class ForumDetailView(DetailView):
     model = ForumPost
     template_name = "forum_detail.html"
     form_class = CommentForm
-    context_object_name = "forums"
 
     def get_queryset(self):
         queryset = self.model.objects.all().order_by("-date_added")
@@ -76,9 +82,13 @@ class ForumDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["post"] = self.get_object()
+        post = self.get_object()
+        context["post"] = post
+        comments = self.object.forumpost.all()
+        context['comments']= comments
+        print(comments)
         if 'form' not in context:
-            context['form'] = self.form_class(request=self.request, post=self.get_object())  # Pass the post object to the form
+            context['form'] = self.form_class(request=self.request, post=post)
         return context
 
     def post(self, request, *args, **kwargs):
@@ -142,9 +152,9 @@ class EditProfileView(UpdateView):
 
 
 
+#STAFF INTERACTION
 
-
-class PatientProfileView(ListView):
+class PatientProfileView(StaffMixin,ListView):
     model = Patient
     template_name = "registration/patient_list.html"
 
@@ -154,7 +164,7 @@ class PatientProfileView(ListView):
         return context
 
 
-class PatientProfileView(DetailView):
+class PatientProfileView(StaffMixin,DetailView):
     model = Patient
     template_name = "registration/patient_profile.html"
 
@@ -221,4 +231,6 @@ class AddConsultationNotes(CreateView):
         form.instance.consultation = consultation
         return super().form_valid(form)
     
+
+
 
