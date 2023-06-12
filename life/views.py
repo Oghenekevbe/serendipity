@@ -154,23 +154,22 @@ class EditProfileView(UpdateView):
 
 #STAFF INTERACTION
 
-class PatientProfileView(StaffMixin,ListView):
+class PatientProfileList(StaffMixin,ListView):
     model = Patient
-    template_name = "registration/patient_list.html"
+    template_name = "patient_list.html"
+    context_object_name ='patients'
+
+class PatientProfileDetail(StaffMixin,DetailView):
+    model = Patient
+    template_name = "patient_detail.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        patients = self.get_object()
+        consultation = self.object.consultation_set.all() 
+        context['consultation'] = consultation
         context["patients"] = patients
-        return context
 
-
-class PatientProfileView(StaffMixin,DetailView):
-    model = Patient
-    template_name = "registration/patient_profile.html"
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["patients"] = patients
         return context
 
 

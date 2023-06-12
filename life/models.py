@@ -27,20 +27,7 @@ class Patient(models.Model):
         return reverse("profile", kwargs={"pk": self.pk})
 
 
-class Notes(models.Model):
-    consultation = models.ForeignKey('Consultation', on_delete=models.CASCADE, null=True)
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
-    notes = models.TextField()
-    date_added = models.DateTimeField(default=datetime.now, blank=True)
 
-    def __str__(self):
-        if self.consultation_id is not None:
-            return f"Notes for Consultation {self.consultation.id}"
-        else:
-            return 'no consultation id'
-
-    class Meta:
-        ordering = ['date_added']
 
 
 class BlogPost(models.Model):
@@ -122,3 +109,17 @@ class ConsultationComment(models.Model):
     def __str__(self):
         return f"{self.author} commented on {self.consultation}"
     
+class Notes(models.Model):
+    consultation = models.ForeignKey('Consultation', on_delete=models.CASCADE, null=True)
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    notes = models.TextField()
+    date_added = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        if self.consultation_id is not None:
+            return f"Notes for Consultation {self.consultation.id}"
+        else:
+            return 'no consultation id'
+
+    class Meta:
+        ordering = ['date_added']

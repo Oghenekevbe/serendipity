@@ -3,31 +3,34 @@
 
 
 {% block content %}
-<div class="container">
-<div class="row">
-{% if patient %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if patients  %}
+                    
+                    {% for patient in patients %}
+                        <div class="card" style="background-color: rgba(225, 225, 225, 0.3); padding: 10px;">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'patient_detail' patient.pk %}">{{patient.user}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    {% endfor %}
+                        
 
-<div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
-    <p>
-    <h3>Username: {{patient.name}}</h3>
-    </p>
-    <p>
-    <h3>First Name: {{patient.email}}</h3>
-    </p>
-    <p>
-    <h3>Last Name: {{patient.phone_number}}</h3>
-    </p>
+                {% else %}
 
-</div>
-{% empty %}
-<div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
-    <p>
-        <h3>There are no patient records</h3>
-    </p>
+                <div>
+                    <p>There are no patients records at this moment</p>
+                </div>
+                
+                
+                {% endif %}
+                
 
-</div>
-
-{% endif %}
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
