@@ -1,3 +1,4 @@
+from typing import Any
 from django import forms
 from django.contrib.auth.models import User
 from .models import (
@@ -74,4 +75,14 @@ class ConsultationCommentForm(forms.Form):
         class Meta:
             model = ConsultationComment
             fields = ["body"]
+    
+class ConsultationNoteForm(forms.ModelForm):
+    notes = forms.CharField(
+        max_length=225, widget=forms.Textarea(attrs={"class": "form-control"})
+    )
+    class Meta:
+            model = Notes
+            fields = ["notes", "doctor"]
+    
+
     

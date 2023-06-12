@@ -15,19 +15,23 @@
       </h6>
     </div>
     {% if user.is_staff %}
-    {% if notes %}
     <button type="submit" id="notes"  class="btn btn-primary btn-sm">Show Notes</button>
     <div class="card mt-3" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; display: none;" id="doctor-notes">
       <h6>Consultation Notes:</h6>
+      <a href="{% url 'add_notes' pk=consultation.id %}" class="btn btn-sm btn-danger">Add a doctor's note</a>
+      <hr>
+      {% if notes %}
+
       <ul>
-        {% for note in notes %}
+        {% for note in notes reversed %}
         <p>
-          {{ note.doctor }} - on
-          {{ note.date_added }}
-        </p>
-        <li>
-          {{ note.notes }}
+          <li>{{ note.doctor }} - on
+          {{ note.date_added }} <br>
+        
+        
+          <em>{{ note.notes }}</em>
         </li>
+      </p>
         {% endfor %}
       </ul>
     </div>
@@ -35,7 +39,7 @@
     {% endif %}
 
 <div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
-    <h6>Add a comment:</h6>
+    <h6 class=" text-danger fw-bold">Add a comment:</h6>
     <form action="" method="POST" id="commentForm">
         {% csrf_token %}
         {{ form.as_p }}

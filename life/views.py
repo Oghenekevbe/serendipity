@@ -1,28 +1,14 @@
 from django.contrib.auth.models import User
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render, redirect
-from django.views.generic import (
-    ListView,
-    DetailView,
-    CreateView,
-    UpdateView,
-    DeleteView,
-)
-from .models import (
-    Doctor,
-    Notes,
-    Patient,
-    ForumPost,
-    BlogPost,
-    JournalPost,
-    Comment,
-    Consultation,
-    ConsultationComment)
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Consultation, ConsultationComment
 from django.urls import reverse_lazy
-from .forms import JournalPostForm, ConsultationForm, EditProfileForm, ConsultationCommentForm
+from .forms import JournalPostForm, ConsultationForm, EditProfileForm, ConsultationCommentForm,ConsultationNoteForm
 
 
 
@@ -213,3 +199,16 @@ class AddConsultation(UserMixin, CreateView):
         kwargs = super().get_form_kwargs()
         kwargs["request"] = self.request
         return kwargs
+    
+class AddConsultationNotes(CreateView):
+    model = Notes
+    template_name = "add_notes.html"
+    form_class = ConsultationNoteForm
+    success_url = reverse_lazy("professional_list")
+
+    def form_valid(self, form):
+        consultation_id = self.kwargs['pk']
+        consultation = get_object_or_404(Consultation, id=consultation_id)
+        form.instance.consultation = consultation
+        return super().form_valid(form)
+    

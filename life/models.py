@@ -34,7 +34,10 @@ class Notes(models.Model):
     date_added = models.DateTimeField(default=datetime.now, blank=True)
 
     def __str__(self):
-        return f"Notes for Consultation {self.consultation.id}"
+        if self.consultation_id is not None:
+            return f"Notes for Consultation {self.consultation.id}"
+        else:
+            return 'no consultation id'
 
     class Meta:
         ordering = ['date_added']
