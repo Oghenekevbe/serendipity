@@ -77,6 +77,7 @@ class ForumPost(models.Model):
     subject = models.CharField(max_length=225)
     body = models.TextField()
     date_added = models.DateTimeField(default=datetime.now, blank=True)
+    comments = models.ForeignKey("Comment", related_name= 'forumpost', null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.subject} | {self.author}"
@@ -86,7 +87,7 @@ class ForumPost(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(ForumPost, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(ForumPost, on_delete=models.CASCADE, related_name='comment')
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     date_added = models.DateTimeField(default=datetime.now, blank=True)

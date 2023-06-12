@@ -86,3 +86,32 @@ class ConsultationNoteForm(forms.ModelForm):
     
 
     
+class CommentForm(forms.ModelForm):
+    body = forms.CharField(max_length=225, widget=forms.Textarea(attrs={"class": "form-control"}))
+    author = forms.ChoiceField(choices=[('anonymous', 'Anonymous'), ('user', 'Use my name')], required=False)
+
+    class Meta:
+        model = Comment
+        fields = ["body", "author"]
+
+class CommentForm(forms.ModelForm):
+    body = forms.CharField(max_length=225, widget=forms.Textarea(attrs={"class": "form-control"}))
+
+    class Meta:
+        model = Comment
+        fields = ["body"]
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        self.post = kwargs.pop('post', None)
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True, *args, **kwargs):
+        comment = super().save(commit=False)
+        comment.post = self.post
+        comment.author = self.request.user if self.request.user.is_authenticated else None
+
+        if commit:
+            comment.save()
+
+        return comment

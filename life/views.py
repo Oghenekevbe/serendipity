@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Doctor, Notes, Patient, ForumPost, BlogPost, JournalPost, Comment, Consultation, ConsultationComment
 from django.urls import reverse_lazy
-from .forms import JournalPostForm, ConsultationForm, EditProfileForm, ConsultationCommentForm,ConsultationNoteForm
+from .forms import JournalPostForm, ConsultationForm, EditProfileForm, ConsultationCommentForm,ConsultationNoteForm, CommentForm
 
 
 
@@ -64,10 +64,10 @@ class ForumListView(ListView):
         queryset = self.model.objects.all().order_by("-date_added")
         return queryset
 
-
 class ForumDetailView(DetailView):
     model = ForumPost
     template_name = "forum_detail.html"
+    form_class = CommentForm
     context_object_name = "forums"
 
     def get_queryset(self):
@@ -77,8 +77,17 @@ class ForumDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["post"] = self.get_object()
+        if 'form' not in context:
+            context['form'] = self.form_class(request=self.request, post=self.get_object())  # Pass the post object to the form
         return context
 
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST, request=request, post=self.get_object())  # Pass the request and post object to the form
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('forum_detail', args=(self.get_object().pk,)))
+        else:
+            return self.render_to_response(self.get_context_data(form=form))
 
 class JournalListView(ListView):
     model = JournalPost
@@ -212,3 +221,4 @@ class AddConsultationNotes(CreateView):
         form.instance.consultation = consultation
         return super().form_valid(form)
     
+
