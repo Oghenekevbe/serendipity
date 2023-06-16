@@ -1,20 +1,45 @@
 {% extends 'base.html' %}
-{% block title %}{{user.username}}'s Profile{% endblock title %}
+{% block title %}{{patient.user}}'s Profile{% endblock title %}
 
 
 {% block content %}
     <div class="container">
         <div class="row">
-            {% if user %}
            
-           <div class="card" style="background-color: rgba(225, 225, 225, 0.5);">
-                <p><h3>Username: {{user.username}}</h3></p>
-                <p><h3>First Name: {{user.first_name}}</h3></p>
-                <p><h3>Last Name: {{user.last_name}}</h3></p>
-                <p><h3>Email: {{user.email}}</h3></p>
+           <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 20px;">
+            <h4>Patient's Details</h4>
+            <hr>
+
+            <h6>Username: {{patient.user}}</h6>
+            <h6>First Name: {{patient.user.first_name}}</h6>
+            <h6>Last Name: {{patient.user.last_name}}</h6>
+            <h6>Email: {{patient.user.email}}</h6>
+
+            <hr>
+            <h5>Patient's Consultation History</h5>
+            <small>click to view consultation details</small> <br>
+
+            <div class="consult-history">
+                {% if consultation %}
+                    
+                    {% for patient in consultation %}
+                        <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 20px;">
+
+                            <a href="{% url 'professional_detail' patient.pk %}" style="text-decoration: none;">{{patient.date}} - Attending Consultant - {{patient.doctor}} </a>
+                        </div>
+                        
+                    {% endfor %}
+                        
+                {% else %}
+                    <em>There are no consultations for this patient</em>
+                {% endif %}
+            </div>
+
+
+
+
 
             </div>
-           {% endif %}
         </div>
     </div>
 {% endblock content %}

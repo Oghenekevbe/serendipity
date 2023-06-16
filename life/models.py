@@ -15,7 +15,7 @@ class Doctor(models.Model):
 
 
 class Patient(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='consultation')
 
     def __str__(self):
         if self.user:
@@ -87,7 +87,7 @@ class Comment(models.Model):
 
 
 class Consultation(models.Model):
-    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, null=True)
+    doctor = models.ForeignKey(Doctor, on_delete=models.CASCADE, null=True, related_name='patient')
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     date = models.DateTimeField(default=datetime.now)
     complaint = models.TextField(default='')

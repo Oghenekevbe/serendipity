@@ -27,6 +27,15 @@ urlpatterns = [
     path("patient_list/", PatientProfileList.as_view(), name="patient_list"),
     path("patient_detail/<str:pk>", PatientProfileDetail.as_view(), name="patient_detail"),
 
+        # USER CREDENTIALS
+    path('register/', views.register, name='register'),
+    path('activate/<uidb64>/<token>', views.activate, name='activate'),
+    path('forgot_password/', views.forgot_password, name= 'forgot_password'),
+    path('reset_password/<uidb64>/<token>/', views.reset_password, name='reset_password'),
+    path('reset_password_email/', views.reset_password_email, name='reset_password_email'),
+    path('change-password/', views.change_password, name='change_password'),            
+
+
 
 ]
 

@@ -29,8 +29,8 @@
           <button data-aos="flip-down" type="submit" id="button"><a href="{% url 'professional_list' %}" style="text-decoration:none; color:#fff;">Talk to a Professional</a></button>
 
           {% else  %}
-          <button data-aos="zoom-in-down" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Join Us</a></button>
-          <button data-aos="zoom-in-left" type="submit" id="button"><a href="" style="text-decoration:none; color:#fff;">Login</a></button>
+          <button data-aos="zoom-in-down" type="submit" id="button"><a href="{% url 'register' %}" style="text-decoration:none; color:#fff;">Join Us</a></button>
+          <button data-aos="zoom-in-left" type="submit" id="button"><a href="{% url 'login' %}" style="text-decoration:none; color:#fff;">Login</a></button>
           {% endif %}
         </div>
         <div data-aos="flip-left" id="desktop-logo" >

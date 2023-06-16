@@ -20,14 +20,17 @@
                 </div>
               </div>
 
-              <div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
-                <h6 class="text-danger fw-bold">Add a comment:</h6>
-                <form action="" method="POST" id="commentForm">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="btn btn-sm btn-outline-light btn-primary">Submit</button>
-                </form>
-            </div>
+                {% if user.is_authenticated %}
+                <div class="commentform" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;">
+                    <h6 class="text-danger fw-bold">Add a comment:</h6>
+                    <form action="" method="POST" id="commentForm">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-sm btn-outline-light btn-primary">Submit</button>
+                    </form>
+                </div>
+    
+                {% endif %}
 
             <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; margin: 10px 0 0 0;" id="comments">
               <h6>Comments:</h6>

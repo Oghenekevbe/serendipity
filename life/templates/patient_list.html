@@ -6,29 +6,30 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                {% if user.id == doctor.user.id or user.is_superuser %}
                 {% if patients  %}
                     
-                    {% for patient in patients %}
-                        <div class="card" style="background-color: rgba(225, 225, 225, 0.3); padding: 10px;">
-                            <ul>
-                                <li>
-                                    <a href="{% url 'patient_detail' patient.pk %}">{{patient.user}}</a>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                    {% endfor %}
-                        
+                {% for patient in patients %}
+                    <div class="card" style="background-color: rgba(225, 225, 225, 0.3); padding: 10px;">
+                        <ul>
+                            <li>
+                                <a href="{% url 'patient_detail' patient.pk %}">{{patient.user}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                {% endfor %}
+                    
 
-                {% else %}
+            {% else %}
 
-                <div>
-                    <p>There are no patients records at this moment</p>
-                </div>
-                
-                
+            <div>
+                <p>There are no patients records at this moment</p>
+            </div>
+            
+            
+            {% endif %}
                 {% endif %}
-                
 
             </div>
         </div>

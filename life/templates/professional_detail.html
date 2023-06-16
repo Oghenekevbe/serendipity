@@ -6,6 +6,7 @@
 <div class="container">
   <div class="row">
     <div class="card" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px;">
+      <h5>Complaint</h5>
       <h6>
         {{ consultation.date }}
       </h6>
@@ -14,8 +15,12 @@
         {{ consultation.complaint }}
       </h6>
     </div>
-    {% if user.is_staff %}
-    <button type="submit" id="notes"  class="btn btn-primary btn-sm">Show Notes</button>
+    {% if user.id == doctor.user.id or user.is_superuser %}
+      <div lass="card mt-3" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px;">
+        <small>Click the button to show notes for this patient</small>
+        <button type="submit" id="notes"  class="btn btn-primary btn-sm">Show Notes</button>
+
+      </div>
     <div class="card mt-3" style="background-color: rgba(225, 225, 225, 0.5); padding: 10px; display: none;" id="doctor-notes">
       <h6>Consultation Notes:</h6>
       <a href="{% url 'add_notes' pk=consultation.id %}" class="btn btn-sm btn-danger">Add a doctor's note</a>
