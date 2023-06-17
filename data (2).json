@@ -1,0 +1,2533 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$JhL5iICX6dc08W2zK7q39u$K346mv8QGSJ8JLSd9JFwazUZy/WJInEHGGhjjb/+IOo=",
+    "last_login": "2023-06-07T12:55:03.307Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Oghenekevbe",
+    "last_name": "Egume",
+    "email": "oghenekevbe.egume@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-04-25T21:07:04Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$eWVThBLuE2Za9zzCCrob7j$+OE1hLfQ6k2VYA0bUEP3x8PXbp5TTwHGXVO6UDPZwwM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "patient1",
+    "first_name": "michael",
+    "last_name": "patient",
+    "email": "patient1@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-27T14:04:06Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$BBxf6MTz9fx3Pkj0Xzk9vF$vMMIpAPNBk2AXgBENMi4FBDd4xruqg68XdXlS15cws4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "patient2",
+    "first_name": "bright",
+    "last_name": "patient",
+    "email": "patient2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-27T14:04:17Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$Y6J42dgNAKU8EVaJtHJMMQ$E+VE016Z2m+IvF1KyaSc1u1pK2/yfWdODVJdygIIt1o=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "doctor1",
+    "first_name": "",
+    "last_name": "",
+    "email": "doctor1@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-27T14:08:58Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$WpeAGMU4HslFpZtgpOXNl8$n3PPOdi15DAlTFufI+4SguwEgYn0CUftCQStym3o41Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "doctor2",
+    "first_name": "",
+    "last_name": "",
+    "email": "doctor2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-27T14:09:28Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$IYybgowlhFxCJFe7bT66qm$p8kdrPptWjDxcKfdaPvKDMbgSwL1sj98Kkwx4ZzX7Tk=",
+    "last_login": "2023-05-18T19:44:23Z",
+    "is_superuser": false,
+    "username": "patient3",
+    "first_name": "sola",
+    "last_name": "patient",
+    "email": "patient3@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-05-18T19:42:34Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$P8S4vloE8BNJL1wBvI93iK$Ari0TrEwcNkYgQyPxv8or2qs9QF8bQJ46hr9VE9dd9Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "oghenekevbe",
+    "first_name": "Oghenekevbe",
+    "last_name": "Egume",
+    "email": "oghenekevbe.egume@gmail.com",
+    "is_staff": false,
+    "is_active": false,
+    "date_joined": "2023-06-16T05:05:10.276Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$260000$7RhclW1Su3cCdVYqI343hY$97IfZdPebF0SeDYndwHB2YK0+FCyYWtNoVSYkBI7GXY=",
+    "last_login": "2023-06-16T05:17:40.869Z",
+    "is_superuser": false,
+    "username": "oghenekevbe2",
+    "first_name": "Oghenekevbe",
+    "last_name": "Egume",
+    "email": "oghenekevbe.egume@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-16T05:16:26.084Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "orpnhchg8kgcxzvwfa29s6fb78zj2vfn",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEwZXi4dO83EBimUjU0Ke3K-O_apAvd3nPOfYmYtrXGrfMSpyLOQovT75YTPbjtoNxTu82S5rYuU5a7Ig_a5XUu_Lwc7t9BTb1-awWWnQlqICZA1gyqcDZ-NNajJzCenLOQAvoBi1bKjYgJgmFPCOjE-wPFoDbE:1pzjrX:9DQZGQ11xLQh67h2h10aTYfoRJtX687EcUUe13pOc2c",
+    "expire_date": "2023-06-01T20:04:35.538Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ux5z4u2312wrnfzuyipc5n93p522zufq",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEMw9Ole7-BwABSNTQp7cr479qkC93ec859sRC3tYVtlCVMmZ0ZsNPvliI9St9Bvsd-mznNfV2mxHeFH3Tw65zL83K4fwctjvatMVaItYIUqJ00yteMYApiwqLBWHRKJKfQA3ktiFA6StZVopo1gmXvD8faN0E:1prPub:gbTaLjnYCpNKcRxgkGCCuKHIRWfshM7iDsblWIkCBzc",
+    "expire_date": "2023-05-09T21:09:21.346Z"
+  }
+},
+{
+  "model": "life.doctor",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "doctor2"
+    ]
+  }
+},
+{
+  "model": "life.doctor",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "doctor1"
+    ]
+  }
+},
+{
+  "model": "life.patient",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "patient3"
+    ]
+  }
+},
+{
+  "model": "life.patient",
+  "pk": 7,
+  "fields": {
+    "user": [
+      "patient2"
+    ]
+  }
+},
+{
+  "model": "life.patient",
+  "pk": 8,
+  "fields": {
+    "user": [
+      "patient1"
+    ]
+  }
+},
+{
+  "model": "life.patient",
+  "pk": 9,
+  "fields": {
+    "user": [
+      "admin"
+    ]
+  }
+},
+{
+  "model": "life.blogpost",
+  "pk": 1,
+  "fields": {
+    "author": [
+      "admin"
+    ],
+    "subject": "5 Simple Ways to Improve Your Mental Health Today",
+    "body": "Taking care of your mental health is just as important as taking care of your physical health. Here are five simple things you can do today to improve your mental health:\r\n\r\nGet enough sleep: Aim for seven to eight hours of sleep each night. Lack of sleep can lead to irritability, anxiety, and depression.\r\n\r\nExercise: Exercise releases endorphins, which can improve your mood and reduce stress. Aim for at least 30 minutes of exercise each day.\r\n\r\nEat well: A healthy diet can improve your mood and energy levels. Make sure to eat plenty of fruits, vegetables, whole grains, and lean protein.\r\n\r\nConnect with others: Social support is important for mental health. Reach out to friends and family, or join a support group.\r\n\r\nPractice self-care: Take time for yourself each day. This could include activities like reading, meditating, or taking a relaxing bath.",
+    "date_added": "2023-04-28T13:30:03Z"
+  }
+},
+{
+  "model": "life.blogpost",
+  "pk": 2,
+  "fields": {
+    "author": [
+      "admin"
+    ],
+    "subject": "Dealing with Stress: Tips for Managing Your Mental Health",
+    "body": "Stress is a normal part of life, but it can take a toll on your mental health if left unchecked. Here are some tips for managing stress and improving your mental health:\r\n\r\nIdentify your stressors: What situations or events trigger your stress? Once you know what they are, you can work on managing them.\r\n\r\nPractice relaxation techniques: Activities like deep breathing, meditation, and yoga can help reduce stress and promote relaxation.\r\n\r\nStay active: Exercise is a great way to reduce stress and improve your mental health. Even a short walk can make a difference.\r\n\r\nPrioritize self-care: Taking time for yourself is important for mental health. Make sure to do things you enjoy and that help you relax.\r\n\r\nSeek help if you need it: If you're struggling with stress or other mental health issues, don't hesitate to reach out for help. Talk to a trusted friend or family member, or seek professional help from a therapist or counselor.",
+    "date_added": "2023-04-28T13:31:30Z"
+  }
+},
+{
+  "model": "life.journalpost",
+  "pk": 1,
+  "fields": {
+    "author": [
+      "patient1"
+    ],
+    "subject": "tired",
+    "body": "Today i woke up and it felt like the whole world had gone to shits. I don't know what to say or do with myself. I am so tired. i just want to fall asleep",
+    "date_added": "2023-05-02T22:44:16Z"
+  }
+},
+{
+  "model": "life.journalpost",
+  "pk": 2,
+  "fields": {
+    "author": [
+      "patient1"
+    ],
+    "subject": "tired again",
+    "body": "Today i woke up and it felt like the whole world had gone to shits. I don't know what to say or do with myself. I am so tired. i just want to fall asleep",
+    "date_added": "2023-05-02T22:48:05Z"
+  }
+},
+{
+  "model": "life.journalpost",
+  "pk": 3,
+  "fields": {
+    "author": [
+      "admin"
+    ],
+    "subject": "testing",
+    "body": "testing the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journaltesting the journal",
+    "date_added": "2023-05-02T22:50:49Z"
+  }
+},
+{
+  "model": "life.journalpost",
+  "pk": 9,
+  "fields": {
+    "author": [
+      "admin"
+    ],
+    "subject": "new journal entry",
+    "body": "testing the new journal entry",
+    "date_added": "2023-05-17T10:45:52.919Z"
+  }
+},
+{
+  "model": "life.forumpost",
+  "pk": 1,
+  "fields": {
+    "author": [
+      "doctor1"
+    ],
+    "subject": "Overcoming Anxiety: Tips and Strategies",
+    "body": "This forum talk could provide tips and strategies for individuals struggling with anxiety. The talk could cover topics such as deep breathing exercises, mindfulness practices, and cognitive behavioral therapy techniques. The goal would be to provide individuals with practical tools to manage their anxiety and improve their mental health.",
+    "date_added": "2023-04-28T13:35:35Z",
+    "comments": []
+  }
+},
+{
+  "model": "life.forumpost",
+  "pk": 2,
+  "fields": {
+    "author": [
+      "doctor2"
+    ],
+    "subject": "Breaking the Stigma: The Importance of Mental Health Awareness",
+    "body": "This forum talk could focus on the stigma surrounding mental health and the importance of raising awareness and advocating for those struggling with mental health issues. The talk could address common misconceptions about mental health and provide resources for individuals who may be seeking support. The goal would be to promote empathy, understanding, and action towards improving mental health outcomes.",
+    "date_added": "2023-04-28T13:39:16Z",
+    "comments": []
+  }
+},
+{
+  "model": "life.comment",
+  "pk": 1,
+  "fields": {
+    "post": 1,
+    "author": [
+      "patient1"
+    ],
+    "body": "nice doc.",
+    "date_added": "2023-04-28T13:38:47Z"
+  }
+},
+{
+  "model": "life.comment",
+  "pk": 2,
+  "fields": {
+    "post": 2,
+    "author": [
+      "patient2"
+    ],
+    "body": "nice,  doc",
+    "date_added": "2023-04-28T13:44:12Z"
+  }
+},
+{
+  "model": "life.comment",
+  "pk": 3,
+  "fields": {
+    "post": 2,
+    "author": [
+      "admin"
+    ],
+    "body": "hey",
+    "date_added": "2023-06-12T11:48:07.694Z"
+  }
+},
+{
+  "model": "life.comment",
+  "pk": 4,
+  "fields": {
+    "post": 2,
+    "author": [
+      "admin"
+    ],
+    "body": "hi",
+    "date_added": "2023-06-12T12:02:06.457Z"
+  }
+},
+{
+  "model": "life.comment",
+  "pk": 5,
+  "fields": {
+    "post": 2,
+    "author": [
+      "admin"
+    ],
+    "body": "try",
+    "date_added": "2023-06-12T17:19:44.361Z"
+  }
+},
+{
+  "model": "life.consultation",
+  "pk": 12,
+  "fields": {
+    "doctor": 4,
+    "patient": 9,
+    "date": "2023-06-07T20:22:36Z",
+    "complaint": "testing consultatoon",
+    "comment": null
+  }
+},
+{
+  "model": "life.consultation",
+  "pk": 13,
+  "fields": {
+    "doctor": 4,
+    "patient": 6,
+    "date": "2023-06-12T09:21:05Z",
+    "complaint": "consultation ooooooooooooooo",
+    "comment": null
+  }
+},
+{
+  "model": "life.consultation",
+  "pk": 14,
+  "fields": {
+    "doctor": 5,
+    "patient": 9,
+    "date": "2023-06-13T09:23:54Z",
+    "complaint": "consultation 2 test",
+    "comment": null
+  }
+},
+{
+  "model": "life.consultationcomment",
+  "pk": 3,
+  "fields": {
+    "consultation": 12,
+    "author": [
+      "admin"
+    ],
+    "body": "my admin comment to doctor",
+    "date_added": "2023-06-07T22:36:53Z"
+  }
+},
+{
+  "model": "life.consultationcomment",
+  "pk": 4,
+  "fields": {
+    "consultation": 12,
+    "author": [
+      "doctor2"
+    ],
+    "body": "doc 2 comment to admin patient",
+    "date_added": "2023-06-07T22:37:10Z"
+  }
+},
+{
+  "model": "life.consultationcomment",
+  "pk": 9,
+  "fields": {
+    "consultation": 13,
+    "author": [
+      "doctor1"
+    ],
+    "body": "testing for patient 3",
+    "date_added": "2023-06-12T09:21:29Z"
+  }
+},
+{
+  "model": "life.consultationcomment",
+  "pk": 10,
+  "fields": {
+    "consultation": 13,
+    "author": [
+      "patient3"
+    ],
+    "body": "testing patient 3 reply",
+    "date_added": "2023-06-12T09:21:58Z"
+  }
+},
+{
+  "model": "life.consultationcomment",
+  "pk": 11,
+  "fields": {
+    "consultation": 12,
+    "author": [
+      "admin"
+    ],
+    "body": "dd",
+    "date_added": "2023-06-12T10:37:19.939Z"
+  }
+},
+{
+  "model": "life.notes",
+  "pk": 1,
+  "fields": {
+    "consultation": 12,
+    "doctor": 4,
+    "notes": "testing note 1",
+    "date_added": "2023-06-07T21:13:47Z"
+  }
+},
+{
+  "model": "life.notes",
+  "pk": 2,
+  "fields": {
+    "consultation": 12,
+    "doctor": 5,
+    "notes": "patent is tiring",
+    "date_added": "2023-06-07T21:45:37Z"
+  }
+},
+{
+  "model": "life.notes",
+  "pk": 3,
+  "fields": {
+    "consultation": 13,
+    "doctor": 4,
+    "notes": "doc 2 notes for patient 3",
+    "date_added": "2023-06-12T09:22:37Z"
+  }
+},
+{
+  "model": "life.notes",
+  "pk": 5,
+  "fields": {
+    "consultation": 12,
+    "doctor": 4,
+    "notes": "jsbsbss",
+    "date_added": "2023-06-12T10:37:40.488Z"
+  }
+},
+{
+  "model": "life.notes",
+  "pk": 6,
+  "fields": {
+    "consultation": 12,
+    "doctor": 5,
+    "notes": "bhhhh",
+    "date_added": "2023-06-12T10:38:31.536Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-04-27T14:04:06.466Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-04-27T14:04:17.735Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-04-27T14:04:51.054Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "patient2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-04-27T14:05:12.868Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "patient1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-04-27T14:08:58.619Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "doctor1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-04-27T14:09:17.969Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "doctor1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-04-27T14:09:28.962Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-04-27T14:09:43.554Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "doctor2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-04-27T14:10:42.207Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "1",
+    "object_repr": "doctor1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-04-27T14:10:59.478Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "2",
+    "object_repr": "doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-04-27T14:11:13.601Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "1",
+    "object_repr": "patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-04-27T14:11:23.552Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "2",
+    "object_repr": "patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-04-27T14:11:56.299Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "1",
+    "object_repr": "doctor1 | patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-04-27T14:12:05.754Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "2",
+    "object_repr": "doctor1 | patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-04-27T14:12:12.263Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "3",
+    "object_repr": "doctor2 | patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-04-27T14:12:21.560Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "4",
+    "object_repr": "doctor2 | patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-04-28T12:31:30.560Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "blogpost"
+    ],
+    "object_id": "1",
+    "object_repr": "5 Simple Ways to Improve Your Mental Health Today | admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-04-28T12:32:50.338Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "blogpost"
+    ],
+    "object_id": "2",
+    "object_repr": "Dealing with Stress: Tips for Managing Your Mental Health | admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-04-28T12:38:42.544Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "forumpost"
+    ],
+    "object_id": "1",
+    "object_repr": "Overcoming Anxiety: Tips and Strategies | doctor1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-04-28T12:39:00.351Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "comment"
+    ],
+    "object_id": "1",
+    "object_repr": "Overcoming Anxiety: Tips and Strategies | patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-04-28T12:39:45.179Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "forumpost"
+    ],
+    "object_id": "2",
+    "object_repr": "Breaking the Stigma: The Importance of Mental Health Awareness | doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-04-28T12:44:24.768Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "comment"
+    ],
+    "object_id": "2",
+    "object_repr": "Breaking the Stigma: The Importance of Mental Health Awareness | patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-05-02T21:48:05.015Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "journalpost"
+    ],
+    "object_id": "1",
+    "object_repr": "tired | patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-05-02T21:48:21.048Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "journalpost"
+    ],
+    "object_id": "2",
+    "object_repr": "tired again | patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-05-02T21:51:18.512Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "journalpost"
+    ],
+    "object_id": "3",
+    "object_repr": "testing | admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-05-02T21:51:30.347Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "journalpost"
+    ],
+    "object_id": "4",
+    "object_repr": "testing 2 | admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-05-03T18:30:17.222Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-05-03T18:33:04.630Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "3",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-05-03T18:33:41.957Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "3",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-05-03T19:02:43.879Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-05-03T20:42:31.746Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "3",
+    "object_repr": "Unassigned Doctor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-05-03T20:42:31.836Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "2",
+    "object_repr": "Unassigned Doctor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-05-03T20:42:41.304Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "1",
+    "object_repr": "Unassigned Doctor",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-05-03T20:43:10.638Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "profile"
+    ],
+    "object_id": "1",
+    "object_repr": "Profile object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2023-05-03T20:43:18.949Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "4",
+    "object_repr": "Dr. doctor1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2023-05-03T20:43:39.264Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "profile"
+    ],
+    "object_id": "2",
+    "object_repr": "Profile object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2023-05-03T20:43:41.272Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "5",
+    "object_repr": "Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2023-05-03T20:44:04.923Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "profile"
+    ],
+    "object_id": "3",
+    "object_repr": "Profile object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2023-05-03T20:44:33.056Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "4",
+    "object_repr": "Patient patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2023-05-03T20:44:49.108Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "profile"
+    ],
+    "object_id": "4",
+    "object_repr": "Profile object (4)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2023-05-03T20:44:50.849Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "5",
+    "object_repr": "Patient patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2023-05-03T20:45:27.644Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "3",
+    "object_repr": "Unassigned Patient",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2023-05-03T20:45:27.726Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "2",
+    "object_repr": "Unassigned Patient",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2023-05-03T20:45:27.826Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "1",
+    "object_repr": "Unassigned Patient",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2023-05-03T20:46:23.107Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "5",
+    "object_repr": "Dr. Dr. doctor1's notes for Patient patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2023-05-03T20:46:30.847Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "6",
+    "object_repr": "Dr. Dr. doctor1's notes for Patient patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2023-05-03T20:46:38.251Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "7",
+    "object_repr": "Dr. Dr. doctor2's notes for Patient patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2023-05-03T20:46:46.978Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "8",
+    "object_repr": "Dr. Dr. doctor2's notes for Patient patient2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2023-05-07T18:30:45.703Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "profile"
+    ],
+    "object_id": "5",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2023-05-07T18:30:55.793Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "6",
+    "object_repr": " admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2023-05-07T18:53:48.575Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "9",
+    "object_repr": " Dr. doctor1's notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2023-05-07T18:53:52.440Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "10",
+    "object_repr": " Dr. doctor1's notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2023-05-07T18:53:56.511Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "1",
+    "object_repr": "Dr. doctor1's consultation notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2023-05-07T18:57:09.194Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "2",
+    "object_repr": "Dr. doctor2's consultation notes for  patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2023-05-07T18:57:09.406Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "3",
+    "object_repr": "Dr. doctor2's consultation notes for  patient1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2023-05-07T19:48:37.608Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "1",
+    "object_repr": " admin's consultation with Dr. doctor1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\", \"Complaint\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2023-05-07T20:00:47.940Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "3",
+    "object_repr": " patient1's consultation with Dr. doctor2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\", \"Complaint\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2023-05-07T20:01:41.331Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "2",
+    "object_repr": " patient2's consultation with Dr. doctor1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Doctor\", \"Patient\", \"Notes\", \"Complaint\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2023-05-07T21:43:35.680Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "4",
+    "object_repr": " admin's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2023-05-07T21:48:27.784Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "1",
+    "object_repr": "admin commented on  admin's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2023-05-07T21:48:42.492Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "2",
+    "object_repr": "doctor1 commented on  admin's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2023-05-18T19:40:07.318Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "7",
+    "object_repr": " admin's consultation with None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2023-05-18T19:40:07.426Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "6",
+    "object_repr": " admin's consultation with None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2023-05-18T19:40:07.543Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "5",
+    "object_repr": " admin's consultation with None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2023-05-18T19:42:34.919Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "patient3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2023-05-18T19:42:49.686Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "patient3",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2023-05-18T19:44:04.132Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "patient3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2023-06-07T13:15:45.746Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "5",
+    "object_repr": "Dr. doctor1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2023-06-07T13:15:50.625Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "doctor"
+    ],
+    "object_id": "4",
+    "object_repr": "Dr. doctor2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2023-06-07T13:16:00.590Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "9",
+    "object_repr": " admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2023-06-07T13:16:09.054Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "8",
+    "object_repr": " patient1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2023-06-07T13:16:14.628Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "7",
+    "object_repr": " patient2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2023-06-07T13:16:19.819Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "6",
+    "object_repr": " patient3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2023-06-07T13:16:33.036Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "5",
+    "object_repr": "Unassigned Patient",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2023-06-07T13:16:33.127Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "patient"
+    ],
+    "object_id": "4",
+    "object_repr": "Unassigned Patient",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2023-06-07T19:09:28.039Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "10",
+    "object_repr": " admin's consultation with Dr. doctor2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Doctor\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2023-06-07T19:09:40.734Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "9",
+    "object_repr": " patient1's consultation with Dr. doctor1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Doctor\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2023-06-07T19:10:46.229Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "2",
+    "object_repr": "doctor1 commented on  patient3's consultation with Dr. doctor1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2023-06-07T19:10:51.651Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "1",
+    "object_repr": "admin commented on  patient3's consultation with Dr. doctor1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2023-06-07T19:10:59.761Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "10",
+    "object_repr": " admin's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2023-06-07T19:10:59.860Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "9",
+    "object_repr": " patient1's consultation with Dr. doctor1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2023-06-07T19:10:59.951Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "8",
+    "object_repr": " patient2's consultation with None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2023-06-07T19:11:00.026Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "4",
+    "object_repr": " patient3's consultation with Dr. doctor1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2023-06-07T19:11:00.110Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "1",
+    "object_repr": " patient3's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2023-06-07T19:11:21.063Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "10",
+    "object_repr": " Dr. doctor2's notes for  patient3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2023-06-07T19:11:21.144Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "9",
+    "object_repr": " Dr. doctor2's notes for  patient3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2023-06-07T19:18:44.587Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "11",
+    "object_repr": " admin's consultation with None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2023-06-07T19:37:38.168Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "11",
+    "object_repr": " Dr. doctor2's notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2023-06-07T19:37:49.078Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "12",
+    "object_repr": " Dr. doctor1's notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2023-06-07T19:37:58.973Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "13",
+    "object_repr": " Dr. doctor2's notes for  admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2023-06-07T19:56:37.913Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "12",
+    "object_repr": " admin's consultation with Dr. doctor2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Notes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2023-06-07T20:08:34.239Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "11",
+    "object_repr": " Dr. doctor2's notes for  admin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2023-06-07T20:08:34.310Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "12",
+    "object_repr": " Dr. doctor1's notes for  admin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2023-06-07T20:08:34.403Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "13",
+    "object_repr": " Dr. doctor2's notes for  admin",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2023-06-07T20:13:41.738Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "12",
+    "object_repr": "admin's consultation with Dr. doctor2",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2023-06-07T20:14:03.055Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "1",
+    "object_repr": "Notes for Consultation 12",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2023-06-07T20:45:48.448Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "2",
+    "object_repr": "Notes for Consultation 12",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2023-06-07T21:37:10.204Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "3",
+    "object_repr": "admin commented on admin's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2023-06-07T21:37:26.223Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "4",
+    "object_repr": "doctor2 commented on admin's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2023-06-07T22:25:23.219Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "8",
+    "object_repr": "admin commented on admin's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2023-06-07T22:25:23.338Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "7",
+    "object_repr": "admin commented on admin's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2023-06-07T22:25:23.547Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "6",
+    "object_repr": "admin commented on admin's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2023-06-07T22:25:23.637Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "5",
+    "object_repr": "admin commented on admin's consultation with Dr. doctor2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2023-06-12T08:21:23.305Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "13",
+    "object_repr": "patient3's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2023-06-12T08:21:54.692Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "9",
+    "object_repr": "doctor1 commented on patient3's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2023-06-12T08:22:14.002Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultationcomment"
+    ],
+    "object_id": "10",
+    "object_repr": "patient3 commented on patient3's consultation with Dr. doctor2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2023-06-12T08:22:53.229Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "3",
+    "object_repr": "Notes for Consultation 13",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2023-06-12T09:44:17.454Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "notes"
+    ],
+    "object_id": "4",
+    "object_repr": "no consultation id",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2023-06-13T08:01:42.513Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "patient1",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2023-06-13T08:01:56.467Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "patient2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2023-06-13T08:02:15.175Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "patient3",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2023-06-13T08:24:37.054Z",
+    "user": [
+      "admin"
+    ],
+    "content_type": [
+      "life",
+      "consultation"
+    ],
+    "object_id": "14",
+    "object_repr": "admin's consultation with Dr. doctor1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
