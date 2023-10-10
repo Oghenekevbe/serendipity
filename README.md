@@ -1,8 +1,5 @@
-# serendipity
+# Serendipity
 A mental health app for youths
-# Django Web Application
-
-Welcome to our Django web application! This versatile app offers a range of features for different user roles, allowing users to interact with the platform based on their roles and privileges.
 
 ## Features
 
